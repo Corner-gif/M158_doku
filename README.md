@@ -67,16 +67,17 @@ C:\Daten\CSS\main.css
 
 
 
-Wie ist der absolute Pfad von der Datei "main.css"?
+1. Wie ist der absolute Pfad von der Datei "main.css"?
+C:\Daten\CSS\main.css
 
+2. Angenommen, Sie wollen in der "index.html" Datei das Bild "Blume.jpg" einfügen, wie ist der relative Pfad zum Bild?
+\Bilder\Blume.jpg
 
-Angenommen, Sie wollen in der "index.html" Datei das Bild "Blume.jpg" einfügen, wie ist der relative Pfad zum Bild?
+3. Sie wollen von der Datei "main.css" auf das Bild "Blume.jpg" zugreifen, wie ist der absolute Pfad?
+C:\Daten\Bilder\Blume.jpg
 
+4. Sie wollen von der Datei "main.css" auf das Bild "Blume.jpg" zugreifen, wie ist der relative Pfad?
+...\Bilder\Blume.jpg
 
-Sie wollen von der Datei "main.css" auf das Bild "Blume.jpg" zugreifen, wie ist der absolute Pfad?
-
-
-Sie wollen von der Datei "main.css" auf das Bild "Blume.jpg" zugreifen, wie ist der relative Pfad?
-
-
-Sie wollen von der Datei "test.html" auf das Bild "Blume.jpg" zugreifen, wie ist der relative Pfad?
+5. Sie wollen von der Datei "test.html" auf das Bild "Blume.jpg" zugreifen, wie ist der relative Pfad?
+Blume.jpg

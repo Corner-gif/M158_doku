@@ -50,3 +50,33 @@ Folgende Anwendungen können grundsätzlich auf Linux und Windows laufen:
 - Registry + INI / proprietäre Formate  
 
 ---
+
+
+## Übung Pfade
+Lokal
+
+Folgende Verzeichnisstruktur ist vorhanden:
+```
+C:\Daten\Bilder
+C:\Daten\CSS
+C:\Daten\index.html
+C:\Daten\Bilder\Blume.jpg
+C:\Daten\Bilder\test.html
+C:\Daten\CSS\main.css
+```
+
+
+
+Wie ist der absolute Pfad von der Datei "main.css"?
+
+
+Angenommen, Sie wollen in der "index.html" Datei das Bild "Blume.jpg" einfügen, wie ist der relative Pfad zum Bild?
+
+
+Sie wollen von der Datei "main.css" auf das Bild "Blume.jpg" zugreifen, wie ist der absolute Pfad?
+
+
+Sie wollen von der Datei "main.css" auf das Bild "Blume.jpg" zugreifen, wie ist der relative Pfad?
+
+
+Sie wollen von der Datei "test.html" auf das Bild "Blume.jpg" zugreifen, wie ist der relative Pfad?

@@ -10,3 +10,8 @@
 9. Webserver sendet daten an User
 
 ![help](../Screenshot/ablaufhttps.png)
+
+## Aufgabe 3.
+HTTPS: User <--> Webserver
+mysqli: Webserver <--> DB-server
+ext4: /var/www/html/super-cms

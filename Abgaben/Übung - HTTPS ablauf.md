@@ -9,7 +9,7 @@
 8. DB liefert Daten
 9. Webserver sendet daten an User
 
-![help](../Screenshot/ablaufhttps.png)
+![help](../Screenshot/https.png)
 
 ## Aufgabe 3.
 HTTPS: User <--> Webserver

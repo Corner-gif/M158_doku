@@ -11,3 +11,5 @@ System läuft on-prem als VM
 CentOS 6 ist veraltet / nicht mehr unterstützt
 
 **Soll**
+System: Vtiger CRM V9
+Betriebssystem: 

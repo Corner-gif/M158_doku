@@ -32,6 +32,9 @@ Bestehende Datenbanken:
 * information_schema
 Bestehende User:
 vtigercrm: 
+```
+mysql> SELECT user_name, user_password, email1 FROM vtiger_users;
+```
 +-----------+------------------------------------+--------------------+
 | user_name | user_password                      | email1             |
 +-----------+------------------------------------+--------------------+
@@ -39,3 +42,4 @@ vtigercrm:
 | sepp      | $1$se000000$KRn9kiYxE/S641n24kfbA/ | sepp@sample.com    |
 | chantal   | $1$ch000000$9NT/kT3TKqF3tDE0w.YTz1 | chantal@sample.com |
 +-----------+------------------------------------+--------------------+
+

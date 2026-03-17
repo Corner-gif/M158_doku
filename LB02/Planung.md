@@ -26,6 +26,18 @@ Bestehende Datenbanken:<br>
 * test
 * vtigercrm
 * information_schema
+```
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| test               |
+| vtigercrm          |
++--------------------+
+```
+
 Bestehende User:
 vtigercrm: 
 ```
@@ -39,3 +51,6 @@ mysql> SELECT user_name, user_password, email1 FROM vtiger_users;
 | chantal   | $1$ch000000$9NT/kT3TKqF3tDE0w.YTz1 | chantal@sample.com |
 +-----------+------------------------------------+--------------------+
 ```
+
+### Zeitplan
+![help](../Screenshot/Zeitplan.png)

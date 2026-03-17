@@ -10,11 +10,7 @@ Im Rahmen dieses Projekts wird das bestehende Vtiger CRM-System, das aktuell auf
 * Server: crmserver.sample.ch
 * System läuft on-prem als VM
 * CentOS 6 ist veraltet / nicht mehr unterstützt
-### Bestehende Datenbanken:
-* mysql
-* test
-* vtigercrm
-* information_schema
+
 
 **Soll**
 * System: Vtiger CRM V9

@@ -3,29 +3,29 @@
 Im Rahmen dieses Projekts wird das bestehende Vtiger CRM-System, das aktuell auf einem CentOS 6.6 Server mit MySQL-Datenbank betrieben wird, auf eine moderne und unterstützte Systemumgebung migriert.
 
 **Ist**
-System: Vtiger CRM
-Betriebssystem: CentOS 6.6
-Datenbank: MySQL 14.14 Distrib 5.1.73
-Webserver: Apache/2.2.15 (Unix)
-Server: crmserver.sample.ch
-System läuft on-prem als VM
-CentOS 6 ist veraltet / nicht mehr unterstützt
-Bestehende Datenbanken:
+* System: Vtiger CRM
+* Betriebssystem: CentOS 6.6
+* Datenbank: MySQL 14.14 Distrib 5.1.73
+* Webserver: Apache/2.2.15 (Unix)
+* Server: crmserver.sample.ch
+* System läuft on-prem als VM
+* CentOS 6 ist veraltet / nicht mehr unterstützt
+### Bestehende Datenbanken:
 * mysql
 * test
 * vtigercrm
 * information_schema
 
 **Soll**
-System: Vtiger CRM V9
-Betriebssystem: Ubuntu Server 22.04 LTS
-Datenbank: MySQL 10.6
-Webserver: Apache 2.4
+* System: Vtiger CRM V9
+* Betriebssystem: Ubuntu Server 22.04 LTS
+* Datenbank: MySQL 10.6
+* Webserver: Apache 2.4
 
 
 
 **MySQL**:
-Bestehende Datenbanken:
+Bestehende Datenbanken:<br>
 * mysql
 * test
 * vtigercrm

@@ -17,7 +17,8 @@ Im Rahmen dieses Projekts wird das bestehende Vtiger CRM-System, das aktuell auf
 * Betriebssystem: Ubuntu Server 22.04 LTS
 * Datenbank: MySQL 10.6
 * Webserver: Apache 2.4
-
+**Diagramm**
+![help](../Screenshot/planungdiagramm.png)
 
 
 **MySQL**:

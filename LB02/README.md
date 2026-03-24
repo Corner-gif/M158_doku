@@ -4,3 +4,6 @@
 3. Zielsystem
 4. Migration
 5. Tests
+
+SSH befehl:
+ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@localhost -p 2222

@@ -5,11 +5,24 @@ Im Rahmen dieses Projekts wird das bestehende Vtiger CRM-System, das aktuell auf
 **Ist**
 * System: Vtiger CRM
 * Betriebssystem: CentOS 6.6
+```
+[root@crmserver ~]# cat /etc/redhat-release
+CentOS release 6.6 (Final)
+```
 * Datenbank: MySQL 14.14 Distrib 5.1.73
+```
+[root@crmserver ~]# sudo mysql --version
+mysql  Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1
+```
 * Webserver: Apache/2.2.15 (Unix)
+```
+[root@crmserver ~]# sudo httpd -v
+Server version: Apache/2.2.15 (Unix)
+Server built:   Oct 16 2014 14:48:21
+```
 * Server: crmserver.sample.ch
 * System läuft on-prem als VM
-* CentOS 6 ist veraltet / nicht mehr unterstützt
+* CentOS 6.6 ist veraltet / nicht mehr unterstützt
 
 
 **Soll**
@@ -58,3 +71,5 @@ mysql> SELECT user_name, user_password, email1 FROM vtiger_users;
 
 ## Vtiger
 ![help](../Screenshot/vtigerweb.png)
+
+Da das passwort nicht bekannt ist habe ich dies zurückgesetzt.

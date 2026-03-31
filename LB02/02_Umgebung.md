@@ -8,6 +8,6 @@ Musste die installation mehrfach neu starten. Fehler konnte ich nicht bestimmen.
 Befehl: ssh admin@127.0.0.1 -p 2223
 
 OpenSSH installieren:
-'''
+```
 sudo apt install openssh-server
-'''
+```

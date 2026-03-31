@@ -27,9 +27,12 @@ Server built:   Oct 16 2014 14:48:21
 
 **Soll**
 * System: Vtiger CRM V9
-* Betriebssystem: Ubuntu Server 22.04 LTS
+* Betriebssystem: Ubuntu Server 24.04 LTS
+Ubuntu 24.04 LTS ist bis 2029 gepflegt und die von Vtiger empfohlene Plattform.
 * Datenbank: MySQL 10.6
+MariaDB 10.6 ist Long Term Support und kompaktiebel.
 * Webserver: Apache 2.4
+Version 2.4 bringt HTTP/2-Support, bessere Performance und aktive Sicherheitspflege.
 **Diagramm**
 ![help](../Screenshot/planungdiagramm.png)
 
@@ -73,3 +76,5 @@ mysql> SELECT user_name, user_password, email1 FROM vtiger_users;
 ![help](../Screenshot/vtigerweb.png)
 
 Da das passwort nicht bekannt ist habe ich dies zurückgesetzt.
+
+

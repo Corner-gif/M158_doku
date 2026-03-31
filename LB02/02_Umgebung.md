@@ -10,4 +10,6 @@ Befehl: ssh admin@127.0.0.1 -p 2223
 OpenSSH installieren:
 ```
 sudo apt install openssh-server
+sudo systemctl start ssh
+sudo systemctl status ssh
 ```

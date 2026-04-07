@@ -64,7 +64,8 @@ sudo nano /etc/apache2/sites-available/meine-seite.conf
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-
+5. Testen
+![help](../Screenshot/apachetest.png)
 ## PHP
 1. Update
 ```
@@ -126,3 +127,23 @@ sudo systemctl reload apache2
 ```
 4. Testen
 ![help](../Screenshot/phpmyadmin.png)
+
+## Vtiger
+1. Datenbank erstellen
+```
+CREATE DATABASE vtiger;
+CREATE USER 'vtigeruser'@'localhost' IDENTIFIED BY 'passwort';
+GRANT ALL PRIVILEGES ON vtiger.* TO 'vtigeruser'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
+2.  VTiger herunterladen
+```
+cd /var/www/html
+sudo wget https://sourceforge.net/projects/vtigercrm/files/latest/download -O vtiger.tar.gz
+sudo tar -xzf vtiger.tar.gz
+sudo mv vtigercrm* vtigercrm
+sudo chown -R www-data:www-data /var/www/html/vtigercrm
+```
+3. installationsprozess
+![help](../Screenshot/vtigerinstallprozess.png)

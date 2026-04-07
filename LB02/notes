@@ -5,3 +5,11 @@ PW: 123456
 New:
 ssh admin@127.0.0.1 -p 2223
 PW: admin
+
+Die Dateien kopieren
+scp -P 2222 -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@localhost:/root/vtiger.sql .
+scp -P 2222 -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa -o KexAlgorithms=+diffie-hellman-group1-sha1 root@localhost:/root/vtiger_files.tar.gz .
+
+auf die neue vm:
+scp -P 2223 vtiger.sql admin@localhost:/home/admin/
+scp -P 2223 vtiger_files.tar.gz admin@localhost:/home/admin/

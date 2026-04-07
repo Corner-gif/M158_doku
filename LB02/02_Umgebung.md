@@ -64,3 +64,65 @@ sudo nano /etc/apache2/sites-available/meine-seite.conf
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
+
+## PHP
+1. Update
+```
+sudo apt update
+```
+2. installieren
+```
+sudo apt install php libapache2-mod-php php-mysql
+```
+3. Versionskontrolle
+```
+admin@crmservernew:/etc/apache2/sites-available$ php -v
+PHP 8.3.6 (cli) (built: Mar 20 2026 02:32:55) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.6, Copyright (c) Zend Technologies
+    with Zend OPcache v8.3.6, Copyright (c), by Zend Technologies
+```
+## MariaDB
+
+1. update
+```
+sudo apt update
+```
+2. Installieren
+```
+sudo apt install mariadb-server
+```
+3. version kontrollieren
+```
+admin@crmservernew:/var/www/html$ sudo mariadb -v
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 32
+Server version: 10.11.14-MariaDB-0ubuntu0.24.04.1 Ubuntu 24.04
+```
+4. Absichern
+```
+sudo mysql_secure_installation
+```
+5. Login testen
+```
+sudo mysql -u root -p
+```
+
+## PHPmyadmin
+1. update
+```
+sudo apt update
+```
+2. Installieren
+```
+sudo apt install phpmyadmin
+```
+Alle Fragen mit ja beantworten und pw setzen
+3. Apache Konfiguration verlinken
+```
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin
+sudo systemctl reload apache2
+```
+4. Testen
+![help](../Screenshot/phpmyadmin.png)

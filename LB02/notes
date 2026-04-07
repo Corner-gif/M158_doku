@@ -13,3 +13,7 @@ scp -P 2222 -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa -
 auf die neue vm:
 scp -P 2223 vtiger.sql admin@localhost:/home/admin/
 scp -P 2223 vtiger_files.tar.gz admin@localhost:/home/admin/
+
+vtiger
+vtigeruser --> admin
+admin --> root

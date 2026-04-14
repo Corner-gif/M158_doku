@@ -101,3 +101,6 @@ Die Migration erfolgte per vtiger in der hoffnung keine fehler durch das ständi
 Accounts:
 ![alt text](../Screenshot/Migration_accounts.png)
 Tickets:
+![help](../Screenshot/Migration_tickets.png)
+
+8. kontrollieren

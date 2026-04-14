@@ -67,6 +67,8 @@ mysql -u root -p123456 vtigercrm -e "SELECT table_name, table_rows FROM informat
 6. Export auf dem Quellsystem
 Der Import per mysql dump hat zu einigen Problemen geführt.
 Desswegen habe ich entschieden den Import mit dem Vtiger eigenem impost tool durchzuführen.
+Fehler:
+![help](../Screenshot/migration_fehler.png)
 ```
 mysql -u root -p123456 --default-character-set=utf8 vtigercrm -e \
   "SELECT a.accountname, a.phone, a.email1, a.website,

@@ -96,4 +96,6 @@ mysql -u root -p123456 vtigercrm -e \
 
 7. Import per Vtiger
 Die Migration erfolgte per vtiger in der hoffnung keine fehler durch das ständige verschieben zu generieren.
+Accounts:
 ![alt text](../Screenshot/Migration_accounts.png)
+Tickets:

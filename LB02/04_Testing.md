@@ -4,11 +4,14 @@
 
 1. **Lokale DNS-Auflösung**  
    Befehl: `ping crmserver.sample.ch`  
-   Erwartet: Antwort von 10.0.2.10  
-
+    Erwartet: Antwort von 10.0.2.15  
+    Ergebniss:<br>
+    ![help](../Screenshot/dnstest.png)
 2. **Zweite Domain**  
    Befehl: `ping crm-soll.sample.ch`  
-   Erwartet: Antwort von 10.0.2.10  
+   Erwartet: Antwort von 10.0.2.15  
+   Ergebniss:<br>
+   ![help](../Screenshot/dnstest2.png)
 
 3. **DNS extern**  
    Befehl: `nslookup crmserver.sample.ch`  

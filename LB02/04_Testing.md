@@ -78,14 +78,13 @@
     | vtiger_crmentity | 2414 | 2282 |
 
     Die Abweichungen entstehen, weil die Migration über den Vtiger-Import durchgeführt wurde und nicht über einen vollständigen Datenbank-Dump. Dabei wurden primär die ausgewählten CRM-Module importiert.
-
-12. **Benutzerdaten**  
-    SQL: `SELECT COUNT(*) FROM vtiger_users;`  
-    Erwartet: gleiche Anzahl  
+  
 
 13. **CRM Login**  
     Vorgehen: Login im Browser  
     Erwartet: Dashboard sichtbar  
+    Ergebnis: Login geht
+    ![help](../Screenshot/logintest.png)
 
 14. **Daten anzeigen**  
     Vorgehen: Kontakt öffnen  

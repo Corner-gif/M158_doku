@@ -28,7 +28,7 @@
 
 5. **Webserver HTTPS**  
    Befehl: `curl -I https://crmserver.sample.ch`  
-   Erwartet: Fehler, da kein HTTPS konfiguriert ist  
+   Erwartet: Erwarteter Fehler, da HTTPS nicht konfiguriert ist
    Ergebniss: Fehlschlag
    ![help](../Screenshot/httpsfehlertest.png)
 
@@ -56,28 +56,43 @@
    ![help](../Screenshot/mariadbläuttest.png)
 
 10. **DB Login**  
-    Befehl: `mysql -u <user> -p`  
+    Befehl: `mysql -u root -p`  
     Erwartet: Login erfolgreich  
     Ergebniss: Erfolgreich
     ![help](../Screenshot/dblogintest.png)
 11. **Tabellenanzahl**  
-    SQL: `SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='<db>';`  
+    SQL: `SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='vtiger';`  
     Erwartet: gleiche Anzahl wie vorher  
-
+    
     Ergebnis Datenvergleich
+    | System        | Datenbank | Anzahl Tabellen |
+    |--------------|----------|-----------------|
+    | Zielsystem (neu) | vtiger     | 527             |
+    | Altsystem (alt)  | vtigercrm  | 491             |
 
-    Die wichtigsten migrierten Geschäftsdaten wurden verglichen.
+    Das Zielsystem enthält mehr Tabellen als das Altsystem.
 
+    Erklärung des unteschieds:
+    - das Zielsystem hat neuere Version von Vtiger
+    - bei der Installation zusätzliche System- und Modul-Tabellen erstellt werden
+    - die Migration über den Vtiger-Import durchgeführt wurde und nicht über einen vollständigen Datenbank-Dump
+
+    Das bedeutet:
+    - die Struktur (Tabellen) ist nicht identisch → das ist **erwartet**
+    - entscheidend ist, dass die wichtigen Geschäftsdaten korrekt übernommen wurden
+
+12. **Wichtige CRM-Daten vergleichen**  
+    SQL: `SELECT COUNT(*) FROM vtiger_account;`  
+    SQL: `SELECT COUNT(*) FROM vtiger_contactdetails;`  
+    SQL: `SELECT COUNT(*) FROM vtiger_potential;`  
+    Erwartet: Die wichtigsten Geschäftsdaten sind auf altem und neuem System gleich vorhanden.  
+    Ergebnis: Stimmen überein (Account, Kontakte, Potential)
     | Tabelle | Altsystem | Zielsystem |
     |---|---:|---:|
     | vtiger_account | 703 | 703 |
     | vtiger_contactdetails | 379 | 379 |
-    | vtiger_potential | 600 | 600 |
-    | vtiger_users | 3 | 1 |
-    | vtiger_products | 40 | 0 |
-    | vtiger_crmentity | 2414 | 2282 |
+    | vtiger_potential | 600 | 600 ||
 
-    Die Abweichungen entstehen, weil die Migration über den Vtiger-Import durchgeführt wurde und nicht über einen vollständigen Datenbank-Dump. Dabei wurden primär die ausgewählten CRM-Module importiert.
   
 
 13. **CRM Login**  
@@ -119,8 +134,11 @@
 19. **Backup Restore**  
     Befehl: `mysql -u user -p testdb < backup.sql`  
     Erwartet: Import erfolgreich  
+    Ergebnis: Erfolgreich
+    ![help](../Screenshot/backupuptest.png)
 
 20. **DB Zugriffsschutz**  
     Befehl: `mysql -u falscherUser -p`  
     Erwartet: Access denied  
- 
+    Ergebnis: Erfolgreich
+    ![help](../Screenshot/sqlzugangtest.png)

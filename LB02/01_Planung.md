@@ -26,17 +26,45 @@ Server built:   Oct 16 2014 14:48:21
 
 
 **Soll**
-* System: Vtiger CRM V9
-* Betriebssystem: Ubuntu Server 24.04 LTS
-Ubuntu 24.04 LTS ist bis 2029 gepflegt und die von Vtiger empfohlene Plattform.
-* Datenbank: MySQL 10.6
-MariaDB 10.6 ist Long Term Support und kompaktiebel.
-* Webserver: Apache 2.4
-Version 2.4 bringt HTTP/2-Support, bessere Performance und aktive Sicherheitspflege.
-* PHP: PHP 8.3.6 
+
+* System: Vtiger CRM V9  
+Aktuelle Version mit besserer Sicherheit und Unterstützung moderner Systeme.
+
+* Betriebssystem: Ubuntu Server 24.04 LTS  
+Wird bis 2029 unterstützt und ist sicherer und aktueller als CentOS 6.6.
+
+* Datenbank: MariaDB 10.6  
+Stabile Version und kompatibel mit MySQL, daher gut für Vtiger geeignet.
+
+* Webserver: Apache 2.4  
+Aktuell, sicher und gut mit PHP und Vtiger kompatibel.
+
+* PHP: PHP 8.3.6  
+Neue Version mit besserer Performance und Sicherheit.
 **Diagramm**
 ![help](../Screenshot/planungdiagramm.png)
 
+| Komponente | IST | SOLL |
+|-----------|-----|------|
+| OS | CentOS 6.6 | Ubuntu 24.04 |
+| DB | MySQL 5.1 | MariaDB 10.6 |
+| Webserver | Apache 2.2 | Apache 2.4 |
+| PHP | alt | PHP 8.3 |
+
+
+### Risiken
+
+- Datenverlust bei Migration
+- Inkompatibilität zwischen alter und neuer Vtiger-Version
+- Ausfallzeit während Migration
+- Fehler beim Import der Daten
+
+### Massnahmen
+
+- Vollständiges Backup vor Migration
+- Testmigration in separater VM
+- Vergleich der Daten nach Migration
+- Durchführung ausserhalb der Geschäftszeiten
 
 **MySQL**:
 Bestehende Datenbanken:<br>
@@ -76,8 +104,28 @@ mysql> SELECT user_name, user_password, email1 FROM vtiger_users;
 ## Vtiger
 ![help](../Screenshot/vtigerweb.png)
 
-Da das passwort nicht bekannt ist habe ich dies zurückgesetzt.
 
+### Migrationsstrategie
 
-## Test Cases
+Die Migration erfolgt über den Vtiger-Import.
 
+Vorgehen:
+1. Installation des neuen Systems
+2. Einrichtung der Datenbank
+3. Import der CRM-Daten über Vtiger
+4. Überprüfung der Datenintegrität
+
+Begründung:
+Der Import über Vtiger ist kompatibler bei Versionswechseln als ein direkter Datenbank-Dump.
+
+## Kostenvoranschlag
+
+| Position                   | Aufwand | Preis/h | Total |
+|----------------------------|--------:|--------:|------:|
+| Analyse IST-System         | 4h      | 120 CHF | 480 CHF |
+| Planung                    | 3h      | 120 CHF | 360 CHF |
+| Aufbau Zielsystem          | 6h      | 120 CHF | 720 CHF |
+| Migration Daten            | 4h      | 120 CHF | 480 CHF |
+| Testing                    | 3h      | 120 CHF | 360 CHF |
+| Dokumentation              | 3h      | 120 CHF | 360 CHF |
+| **Total**                  | **23h** |         | **2760 CHF** |

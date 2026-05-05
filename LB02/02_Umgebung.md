@@ -6,7 +6,7 @@ Musste die installation mehrfach neu starten. Fehler konnte ich nicht bestimmen.
 
 ## SSH Einrichten
 Befehl: ssh admin@127.0.0.1 -p 2223
-
+Der SSH-Zugriff erfolgt über Port 2223, da die VM in einer NAT-Umgebung läuft und der Port entsprechend weitergeleitet wurde.
 OpenSSH installieren:
 ```
 sudo apt install openssh-server
@@ -52,7 +52,7 @@ sudo nano /etc/apache2/sites-available/meine-seite.conf
 4. Config einfügen.
 ```
 <VirtualHost *:80>
-    ServerName 127.0.0.1
+    ServerName crmserver.sample.ch
     UseCanonicalName Off
     DocumentRoot /var/www/html/vtigercrm
 <Directory /var/www/html/vtigercrm>
@@ -108,7 +108,7 @@ sudo mysql_secure_installation
 ```
 sudo mysql -u root -p
 ```
-
+Die tatsächlich installierte Version (10.11) weicht von der Planung (10.6) ab, da Ubuntu 24.04 standardmässig eine neuere Version bereitstellt. Diese ist jedoch kompatibel und stellt kein Problem dar.
 ## PHPmyadmin
 1. update
 ```

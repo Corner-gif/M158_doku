@@ -7,3 +7,4 @@
 
 SSH befehl:
 ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@localhost -p 2222
+**Hinweis:** Rechtschreibkontrolle und darstellung wurde Teilweise durch KI wie ChatGPT oder Claude erstellt.

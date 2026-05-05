@@ -59,7 +59,7 @@ Neue Version mit besserer Performance und Sicherheit.
 - Ausfallzeit während Migration
 - Fehler beim Import der Daten
 
-### Massnahmen
+### Schutz
 
 - Vollständiges Backup vor Migration
 - Testmigration in separater VM
@@ -120,12 +120,12 @@ Der Import über Vtiger ist kompatibler bei Versionswechseln als ein direkter Da
 
 ## Kostenvoranschlag
 
-| Position                   | Aufwand | Preis/h | Total |
-|----------------------------|--------:|--------:|------:|
-| Analyse IST-System         | 4h      | 120 CHF | 480 CHF |
-| Planung                    | 3h      | 120 CHF | 360 CHF |
-| Aufbau Zielsystem          | 6h      | 120 CHF | 720 CHF |
-| Migration Daten            | 4h      | 120 CHF | 480 CHF |
-| Testing                    | 3h      | 120 CHF | 360 CHF |
-| Dokumentation              | 3h      | 120 CHF | 360 CHF |
-| **Total**                  | **23h** |         | **2760 CHF** |
+| Position               | Aufwand | Preis/h | Total |
+|-----------------------|--------:|--------:|------:|
+| Analyse IST-System    | 4h      | 120 CHF | 480 CHF |
+| Planung               | 4h      | 120 CHF | 480 CHF |
+| Aufbau Zielsystem     | 8h      | 120 CHF | 720 CHF |
+| Migration Daten       | 6h      | 120 CHF | 720 CHF |
+| Testing               | 4h      | 120 CHF | 480 CHF |
+| Dokumentation         | 5h      | 120 CHF | 600 CHF |
+| **Total**             | **31h** |         | **3480 CHF** |

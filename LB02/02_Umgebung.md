@@ -2,7 +2,8 @@
 
 ## Ubuntu VM installieren
 ![help](../Screenshot/umgebung2.png)
-Musste die installation mehrfach neu starten. Fehler konnte ich nicht bestimmen.
+Ich musste die installation mehrfach neu starten. 
+Den Fehler konnte ich nicht bestimmen, ich vermute aber das es sich um Menschliches versagen handelte.
 
 ## SSH Einrichten
 Befehl: ssh admin@127.0.0.1 -p 2223

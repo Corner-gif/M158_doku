@@ -79,15 +79,14 @@
     - die Migration über den Vtiger-Import durchgeführt wurde und nicht über einen vollständigen Datenbank-Dump
 
     Das bedeutet:
-    - die Struktur (Tabellen) ist nicht identisch → das ist **erwartet**
-    - entscheidend ist, dass die wichtigen Geschäftsdaten korrekt übernommen wurden
+    - Das es unterschiede gibt ist erwartet, da es unterschiedliche systemdaten von vtiger gibt.
 
 12. **Wichtige CRM-Daten vergleichen**  
     SQL: `SELECT COUNT(*) FROM vtiger_account;`  
     SQL: `SELECT COUNT(*) FROM vtiger_contactdetails;`  
     SQL: `SELECT COUNT(*) FROM vtiger_potential;`  
     Erwartet: Die wichtigsten Geschäftsdaten sind auf altem und neuem System gleich vorhanden.  
-    Ergebnis: Stimmen überein (Account, Kontakte, Potential)
+    Ergebnis: Stimmen überein
     | Tabelle | Altsystem | Zielsystem |
     |---|---:|---:|
     | vtiger_account | 703 | 703 |

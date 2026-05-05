@@ -29,6 +29,7 @@ Dieser schritt war wichtig um zu sehen was migriert werden muss und wass anschli
 ```
 mysql -u root -p123456 vtigercrm -e "SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema='vtigercrm' AND table_rows > 50 ORDER BY table_rows DESC;"
 ```
+```
 +------------------------------------+------------+
 | table_name                         | table_rows |
 +------------------------------------+------------+
@@ -64,9 +65,10 @@ mysql -u root -p123456 vtigercrm -e "SELECT table_name, table_rows FROM informat
 | vtiger_parenttabrel                |         65 |
 | vtiger_ws_operation_parameters     |         56 |
 +------------------------------------+------------+
+```
 6. Export auf dem Quellsystem
 Der Import per mysql dump hat zu einigen Problemen geführt.
-Desswegen habe ich entschieden den Import mit dem Vtiger eigenem impost tool durchzuführen.
+Desswegen habe ich entschieden den Import mit dem Vtiger eigenem import tool durchzuführen, da dieser besser mit versionsunterschieden umgehen kann.
 Fehler:
 ![help](../Screenshot/migration_fehler.png)
 ```
@@ -97,7 +99,7 @@ mysql -u root -p123456 vtigercrm -e \
 
 
 7. Import per Vtiger
-Die Migration erfolgte per vtiger in der hoffnung keine fehler durch das ständige verschieben zu generieren.
+Die Migration erfolgte per vtiger in der hoffnung keine fehler durch den Versionsunterschied zu Generieren.
 Accounts:
 ![alt text](../Screenshot/Migration_accounts.png)
 Tickets:

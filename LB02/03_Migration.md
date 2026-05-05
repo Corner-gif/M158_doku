@@ -104,3 +104,4 @@ Accounts:
 ![alt text](../Screenshot/Migration_accounts.png)
 Tickets:
 ![help](../Screenshot/Migration_tickets.png)
+dieses vorgehen habe ich bei allen daten angewendet.

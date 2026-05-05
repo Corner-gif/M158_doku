@@ -85,13 +85,19 @@
     SQL: `SELECT COUNT(*) FROM vtiger_account;`  
     SQL: `SELECT COUNT(*) FROM vtiger_contactdetails;`  
     SQL: `SELECT COUNT(*) FROM vtiger_potential;`  
+    SQL: `SELECT COUNT(*) FROM vtiger_products;`  
+    SQL: `SELECT COUNT(*) FROM vtiger_service;`  
+    SQL: `SELECT COUNT(*) FROM vtiger_leaddetails;` 
     Erwartet: Die wichtigsten Geschäftsdaten sind auf altem und neuem System gleich vorhanden.  
     Ergebnis: Stimmen überein
     | Tabelle | Altsystem | Zielsystem |
     |---|---:|---:|
     | vtiger_account | 703 | 703 |
     | vtiger_contactdetails | 379 | 379 |
-    | vtiger_potential | 600 | 600 ||
+    | vtiger_potential | 600 | 600 |
+    | vtiger_products | 40 | 40 |
+    | vtiger_leaddetails | 50 | 50 |
+    | vtiger_service | 80 | 40 |
 
   
 

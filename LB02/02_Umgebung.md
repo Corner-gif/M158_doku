@@ -19,6 +19,7 @@ sudo systemctl status ssh
 ```
 sudo hostenamectl set-hostname crm-soll.sample.ch
 ```
+crm-soll.sample.ch ist eindeutig dem neuen Server zuortbar
 2. Hosts file anpassen
 ```
   GNU nano 7.2                                                                hosts

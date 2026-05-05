@@ -16,49 +16,49 @@
 3. **DNS extern**  
    Befehl: `nslookup crmserver.sample.ch`  
    Erwartet: Domain wird auf 10.0.2.15 aufgelöst
-   Ergebniss: Erfolgreich
+   Ergebniss: Erfolgreich<br>
    ![help](../Screenshot/nxtest.png)
 
 
 4. **Webserver HTTP**  
    Befehl: `curl -I http://crmserver.sample.ch`  
    Erwartet: HTTP 200 / 301 / 302 
-   Ergebniss: Erfolgreich
+   Ergebniss: Erfolgreich<br>
    ![help](../Screenshot/httptest.png)
 
 5. **Webserver HTTPS**  
    Befehl: `curl -I https://crmserver.sample.ch`  
    Erwartet: Erwarteter Fehler, da HTTPS nicht konfiguriert ist
-   Ergebniss: Fehlschlag
+   Ergebniss: Fehlschlag<br>
    ![help](../Screenshot/httpsfehlertest.png)
 
 6. **Website erreichbar**  
    URL: http://127.0.0.1/vtigercrm/index.php 
-   Erwartet: Erreichbar
+   Erwartet: Erreichbar<br>
    ![test](../Screenshot/webertest.png)
 
 7. **PHP Version**  
    Befehl: `php -v`  
    Erwartet: version 8.3.6
-   Ergebniss: Version 8.3.6
+   Ergebniss: Version 8.3.6<br>
    ![help](../Screenshot/phpvertest.png)
 
 8. **PHP Module**  
    Befehl: `php -m`  
    Erwartet: mysqli, curl vorhanden  
-   Ergebniss: Vorhanden
+   Ergebniss: Vorhanden<br>
    ![help](../Screenshot/msqlicurlvortest.png)
 
 9. **DB läuft**  
    Befehl: `systemctl status mariadb`  
    Erwartet: active (running)  
-   Ergebniss: Läuft
+   Ergebniss: Läuft<br>
    ![help](../Screenshot/mariadbläuttest.png)
 
 10. **DB Login**  
     Befehl: `mysql -u root -p`  
     Erwartet: Login erfolgreich  
-    Ergebniss: Erfolgreich
+    Ergebniss: Erfolgreich<br>
     ![help](../Screenshot/dblogintest.png)
 11. **Tabellenanzahl**  
     SQL: `SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='vtiger';`  
@@ -98,47 +98,47 @@
 13. **CRM Login**  
     Vorgehen: Login im Browser  
     Erwartet: Dashboard sichtbar  
-    Ergebnis: Login geht
+    Ergebnis: Login geht<br>
     ![help](../Screenshot/logintest.png)
 
 14. **Daten anzeigen**  
     Vorgehen: Personen öffnen  
     Erwartet: Daten korrekt sichtbar  
-    Ergebnis: Erfolgreich
+    Ergebnis: Erfolgreich<br>
     ![help](../Screenshot/personendatentest.png)
 
 15. **Datensatz erstellen**  
     Vorgehen: neuen Kontakt erstellen  
     Erwartet: gespeichert  
-    Ergebnis: Erfolgreich
+    Ergebnis: Erfolgreich<br>
     ![alt text](../Screenshot/personerstellentest.png)
 
 16. **Datensatz bearbeiten**  
     Vorgehen: Kontakt ändern  
     Erwartet: Änderung gespeichert  
-    Ergebnis: Erfolgreich
+    Ergebnis: Erfolgreich<br>
     ![alt text](../Screenshot/personbearbeitentest.png)
 
 17. **SFTP Zugriff**  
     Befehl: `sftp user@crmserver.sample.ch`  
     Erwartet: Login möglich  
-    Ergebnis: Erfolgreich
+    Ergebnis: Erfolgreich<br>
     ![help](../Screenshot/sftptest.png)
 
 18. **Backup erstellen**  
     Befehl: `mysqldump -u user -p db > backup.sql`  
     Erwartet: Datei erstellt  
-    Ergebnis: Datei erstellt
+    Ergebnis: Datei erstellt<br>
     ![help](../Screenshot/backuptest.png)
 
 19. **Backup Restore**  
     Befehl: `mysql -u user -p testdb < backup.sql`  
     Erwartet: Import erfolgreich  
-    Ergebnis: Erfolgreich
+    Ergebnis: Erfolgreich<br>
     ![help](../Screenshot/backupuptest.png)
 
 20. **DB Zugriffsschutz**  
     Befehl: `mysql -u falscherUser -p`  
     Erwartet: Access denied  
-    Ergebnis: Erfolgreich
+    Ergebnis: Erfolgreich<br>
     ![help](../Screenshot/sqlzugangtest.png)

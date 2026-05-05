@@ -143,3 +143,7 @@
     Erwartet: Access denied  
     Ergebnis: Erfolgreich<br>
     ![help](../Screenshot/sqlzugangtest.png)
+
+
+**Hinweis:** Tests wurden aufgrund von zeitmangel mit ChatGPT erstellt.
+Prompt: ![alt text](../Screenshot/chatgpttestingprompt.png)

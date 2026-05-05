@@ -69,6 +69,7 @@
     |--------------|----------|-----------------|
     | Zielsystem (neu) | vtiger     | 527             |
     | Altsystem (alt)  | vtigercrm  | 491             |
+    (Tabelle wurde mit ChatGPT erstellt Inhalt ist jedoch original)
 
     Das Zielsystem enthält mehr Tabellen als das Altsystem.
 
